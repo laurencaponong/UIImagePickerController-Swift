@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					893856441DBD65550020FE0E = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 26RHXP32FH;
 						ProvisioningStyle = Automatic;
 					};
 					893856581DBD65550020FE0E = {
@@ -410,9 +411,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 26RHXP32FH;
 				INFOPLIST_FILE = "UIImagePickerController-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "nyc.c4q.lcaponong.UIImagePickerController-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "nyc.lcaponong.UIImagePickerController-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -422,9 +424,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 26RHXP32FH;
 				INFOPLIST_FILE = "UIImagePickerController-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "nyc.c4q.lcaponong.UIImagePickerController-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "nyc.lcaponong.UIImagePickerController-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

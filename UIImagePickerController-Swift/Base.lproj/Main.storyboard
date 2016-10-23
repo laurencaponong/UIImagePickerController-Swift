@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIImagePickerController_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,57 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oyx-SE-KK9">
+                                <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AIa-Kb-kZf">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6d-5m-LLu">
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                        <state key="normal" title="Take photo"/>
+                                        <connections>
+                                            <action selector="takePhotoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZWR-qQ-Z03"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uu-Lq-tjM">
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                        <state key="normal" title="Choose from Library"/>
+                                        <connections>
+                                            <action selector="libraryTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5aa-D9-qtG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="6Uu-Lq-tjM" secondAttribute="bottom" constant="20" id="0Y1-XJ-xWt"/>
+                                    <constraint firstAttribute="trailing" secondItem="f6d-5m-LLu" secondAttribute="trailing" constant="20" id="2Mt-fB-g2j"/>
+                                    <constraint firstItem="6Uu-Lq-tjM" firstAttribute="leading" secondItem="AIa-Kb-kZf" secondAttribute="leading" constant="20" id="79o-vP-tVV"/>
+                                    <constraint firstAttribute="bottom" secondItem="f6d-5m-LLu" secondAttribute="bottom" constant="20" id="E4n-AK-R22"/>
+                                    <constraint firstItem="f6d-5m-LLu" firstAttribute="top" secondItem="AIa-Kb-kZf" secondAttribute="top" constant="20" id="PT5-yq-45v"/>
+                                    <constraint firstItem="6Uu-Lq-tjM" firstAttribute="top" secondItem="AIa-Kb-kZf" secondAttribute="top" constant="20" id="Pjm-V1-zxf"/>
+                                    <constraint firstAttribute="height" constant="90" id="ygd-8u-mar"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Oyx-SE-KK9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0LR-81-9mU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AIa-Kb-kZf" secondAttribute="bottom" id="0e0-jD-ndY"/>
+                            <constraint firstItem="Oyx-SE-KK9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3H1-U5-ags"/>
+                            <constraint firstItem="AIa-Kb-kZf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="A7T-fE-de1"/>
+                            <constraint firstAttribute="trailing" secondItem="Oyx-SE-KK9" secondAttribute="trailing" id="UTP-in-QFS"/>
+                            <constraint firstItem="AIa-Kb-kZf" firstAttribute="top" secondItem="Oyx-SE-KK9" secondAttribute="bottom" id="WXh-mT-3k6"/>
+                            <constraint firstAttribute="trailing" secondItem="AIa-Kb-kZf" secondAttribute="trailing" id="wvJ-1N-Lrb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Oyx-SE-KK9" id="dvu-O6-QhC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>
